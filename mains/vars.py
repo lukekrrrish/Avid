@@ -1,41 +1,28 @@
-from .imports import *
+#vars.py
+
+from mains.imports import *
+
 
 change_log = f'''
-
 {Fore.LIGHTBLACK_EX}lukekrrish : added and changed some of the templates
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 '''
 
 
 class discords():
     class vars():
-        intent = discord.Intents().all()
-        token = "MTAxNDYyNjY2Nzc1NjUyNzc0Ng.G3Luih.CXS3BSxlyak7ncb6C_LzOgUqbPERkxFGIuCeow"
+        token = "MTAxNDYyNjY2Nzc1NjUyNzc0Ng.GgiwxP.WC2TFIryi0Y-7AKly5l7b_bNEZJr_k3mJ4dBJo"
         prefix = "\\"
         client_id = "1014626667756527746"
-        secret_id = "LGXTS2ZqEzfpafAKe2dVyoK4fSwOkv56"
+        secret_id = ""
         __version__ = 1.5
-        avid = commands.Bot( description = "This is Avid bot it's  made by many of my BFF'S", command_prefix = prefix, intents = intent)
+        avid = commands.Bot( description = "This is Avid bot it's  made by many of my BFF'S", command_prefix = prefix, intents = Intents.all())
     class defs():
         def discord_run():
             token = discords.vars.token
-            client = discords.vars.avid
-            try:
-                client.run(token)
-            except discord.errors.LoginFailure:
+            avid = discords.vars.avid
+            if discord.errors.LoginFailure:
+                avid.run(token)
+            else:
                 print(f"{Fore.RED}[ERROR] {Fore.YELLOW}Improper token has been passed" + Fore.RESET)
                 os.system('pause')
 
