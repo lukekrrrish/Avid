@@ -38,36 +38,13 @@ class discords():
             except discord.errors.LoginFailure:
                 print(f"{Fore.RED}[ERROR] {Fore.YELLOW}Improper token has been passed" + Fore.RESET)
                 os.system('pause')
-        def run():
-            avid = discords.vars.avid
-            os.system('cls' if os.name == 'nt' else 'clear')
-            @avid.event
-            async def on_ready():
-                print(f'''{Fore.RED}
-                _        _      _
-               / \__   _(_) __| |
-              / _ \ \ / / |/ _` |
-             / ___ \ V /| | (_| |
-            /_/   \_\_/ |_|\__,_|                                                                                                        
-             ------------------------------------------------------------
-            |    Prefix : {discords.vars.prefix}                         |
-            |                                                            |       
-            |    User : {avid.user}                                      |
-            |                                                            |       
-            |    Token : {discords.vars.token}                           |
-            |                                                            |
-            |    guilds : {len(avid.guilds)}                             |
-            |                                                            |
-            |    version : {discords.vars.__version__}                    |
-            |
-            |   {change_log}    
-             ------------------------------------------------------------ 
-            ''' + Fore.RESET)
+
 
 
 
 class RunDefOnReady():
-    discords.defs.run()
+    pass
+    #discords.defs.run()
 
 
 class defs():
